@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Eco-Credit Nexus
 
-# Run and deploy your AI Studio app
+## Overview
+Eco-Credit Nexus is an autonomous Multi-Agent System designed to approve loans for rural small businesses by combining Financial Risk metrics with UN Sustainable Development Goals (SDG) impact.
 
-This contains everything you need to run your app locally.
+## Architecture
+The system consists of 4 intelligent agents:
+1. **Agent A (DataIngestion):** Pre-processes raw business data.
+2. **Agent B (SDGAuditor):** Analyzes business descriptions for sustainability keywords (Solar, Recycling, etc.).
+3. **Agent C (RiskActuary):** Calculates financial stability based on revenue volatility.
+4. **Agent D (NexusGuardian):** Makes the final credit decision based on a weighted score of Risk and SDG impact.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1oicvCpOiCZR-g_7f00caEG41YOaPerM6
+## Logic
+The final decision is calculated using the following formula:
+`Final_Score = (0.7 * Risk_Score) + (1.5 * SDG_Score)`
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Tech Stack
+- React
+- TypeScript
+- Tailwind CSS
+- Google Gemini API (for synthetic data generation)
